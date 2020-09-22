@@ -1,0 +1,108 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	letter-spacing: 2px;
+}
+
+.modal-btn button {
+	margin-top: 40px;
+	outline: none;
+	color: #000000;
+	border: none;
+	background-color: #eb0b0b;
+	width: 150px;
+	height: 50px;
+	font-size: 20px;
+	font-weight: 400;
+	cursor: pointer;
+	box-shadow: 20px 0 25px rgb(161, 167, 161);
+	transform: rotate(180deg);
+	transition: ease-in-out 1s, width 2s, height 2s, transform 2s, color 2s;
+}
+
+.modal-btn button:hover {
+	width: 180px;
+	transform: rotate(-180deg);
+	transform: scale(1, 1);
+	color: whitesmoke;
+	background-color: #f02b09;
+	font-size: 25px;
+	font-weight: 600;
+}
+
+.modal {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0);
+	transition: 200ms ease-in-out;
+	border: 2px solid rgb(0, 0, 0);
+	border-radius: 10px;
+	z-index: 10;
+	background: linear-gradient(to left, hsl(110, 96%, 49%), rgb(241, 238, 6));
+	width: 500px;
+	max-width: 80%;
+}
+
+.modal.active {
+	transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
+	padding: 10px 15px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid black;
+}
+
+.modal-header .title {
+	font-size: 1.25rem;
+	font-weight: bold;
+	color: rgb(53, 51, 48);
+}
+
+.modal-header .close-button {
+	cursor: pointer;
+	border: none;
+	outline: none;
+	background: none;
+	font-size: 1.25rem;
+	font-weight: bold;
+}
+
+.modal-body {
+	padding: 20px 25px;
+}
+
+#overlay {
+	position: fixed;
+	opacity: 0;
+	transition: 200ms ease-in-out;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(53, 52, 52, 0.5);
+	pointer-events: none;
+}
+
+#overlay.active {
+	opacity: 1;
+	pointer-events: all;
+}
+.close-button {
+	transition: font-size 1s;
+}
+.close-button:hover {
+	color: #000000;
+	font-size: 2rem;
+}
