@@ -3,7 +3,8 @@
 A simple Pop-up window appaers when a users clicks Button.
 
 Check out here..
-##https://winay-chowdary66.github.io/Modal-or-Pop-Up/
+
+## https://winay-chowdary66.github.io/Modal-or-Pop-Up/
 
 
-Found #Bugs, feel free to reach me through Mail!!
+#Bugs Found, feel free to reach me through Mail!!
